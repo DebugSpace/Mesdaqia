@@ -23,7 +23,7 @@ class AuthController extends Controller
         $validatedData['password'] = bcrypt($validatedData['password']);
         $user = new User;
         $user->create($validatedData);
-        $token = $user->createToken('My Token', [$validatedData['role']])->accessToken;
+        $token = $user->createToken('My Token', ['user'])->accessToken;
 
         return response()->json(['status'=>true,'msg' => 'Account Created Successfully'], 201);
     }

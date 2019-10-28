@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/migrate', function() {
-    $output = [];
-    \Artisan::call('migrate', $output);
-    dd($output->fetch());
-});
+// Route::get('/migrate', function() {
+//     $output = [];
+//     \Artisan::call('migrate', $output);
+//     dd($output->fetch());
+// });
