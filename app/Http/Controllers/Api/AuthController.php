@@ -18,8 +18,7 @@ class AuthController extends Controller
             'password' => 'required|confirmed',
             'password_confirmation' => 'required',
             'name' => 'required',
-            'role' => 'required',
-            'phone' => 'required|numeric'
+            'phone' => 'nullable|numeric'
         ]);
         $validatedData['password'] = bcrypt($validatedData['password']);
         $user = new User;

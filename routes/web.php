@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/migrate', function() {
+    $output = [];
+    \Artisan::call('migrate', $output);
+    dd($output->fetch());
+});
