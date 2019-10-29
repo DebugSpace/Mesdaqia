@@ -10,14 +10,13 @@ use Laravel\Passport\HasApiTokens;
 class User extends Authenticatable
 {
     use Notifiable,HasApiTokens;
-    protected $table = 'naqlaowner'; 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','phone','role'
+        'name', 'email', 'password','phone'
     ];
 
     /**
